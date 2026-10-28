@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#FAFAF8" };
 
-const themeInit = `try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){}`;
+const themeInit = `try{var t=localStorage.getItem('theme')==='dark'?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
