@@ -3,6 +3,7 @@ import { Chip } from "../ui/Chip";
 import { Reveal } from "../ui/Reveal";
 import { PhoneMockup } from "../PhoneMockup";
 import { ProjectIcon } from "../ui/iconMap";
+import { StoreBadge } from "../ui/StoreBadge";
 
 export function MoreProjects() {
   const m = content.projects.more;
@@ -31,13 +32,9 @@ export function MoreProjects() {
                   <div className="mt-4 flex flex-wrap gap-2">
                     {p.tech.map((t) => <Chip key={t}>{t}</Chip>)}
                   </div>
-                  <div className="mt-auto pt-6">
-                    <a
-                      href={p.button.href}
-                      className="inline-flex h-9 items-center rounded-full bg-[image:var(--grad)] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(67,56,202,.25)] transition-transform hover:-translate-y-0.5"
-                    >
-                      {p.button.label}
-                    </a>
+                  <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                    <StoreBadge store="play" display />
+                    <StoreBadge store="apple" display />
                   </div>
                 </div>
               </article>

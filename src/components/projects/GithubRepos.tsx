@@ -38,13 +38,12 @@ export async function GithubRepos() {
         <div className="mt-10 grid gap-[17px] md:grid-cols-2 lg:grid-cols-3">
           {repos.map((r, i) => (
             <Reveal key={r.id} delay={i * 0.06} className="h-full min-w-0">
-              <a href={r.html_url} target="_blank" rel="noopener noreferrer" className="card card-hover flex h-full flex-col rounded-3xl p-5">
+              <div className="card card-hover flex h-full flex-col rounded-3xl p-5">
                 <div className="flex items-center justify-between gap-3">
                   <span className="flex min-w-0 items-center gap-2 text-[17px] font-bold text-ink">
                     <GitBranch size={16} className="shrink-0 text-primary" aria-hidden />
                     <span className="truncate">{r.name}</span>
                   </span>
-                  <ArrowUpRight size={16} className="shrink-0 text-muted" aria-hidden />
                 </div>
                 <p className="mt-3 line-clamp-2 text-[15px] leading-6 text-muted">{r.description || "No description provided."}</p>
                 <div className="mt-auto flex items-center gap-4 pt-4 text-sm text-muted">
@@ -56,7 +55,7 @@ export async function GithubRepos() {
                   <span className="flex items-center gap-1"><Star size={14} /> {r.stargazers_count}</span>
                   <span className="flex items-center gap-1"><GitFork size={14} /> {r.forks_count}</span>
                 </div>
-              </a>
+              </div>
             </Reveal>
           ))}
         </div>

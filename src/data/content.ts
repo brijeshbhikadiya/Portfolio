@@ -184,7 +184,7 @@ export const content = {
           accent: ["#7C3AED", "#EC4899"] as Accent,
           phoneTitle: "QuickMail",
           screenshot: "",
-          links: { playStore: "", appStore: "", github: "", demo: "" },
+          links: { playStore: "https://play.google.com/store/apps/details?id=com.emailwriter&hl=en_IN", appStore: "", github: "", demo: "" },
         },
       ],
     },
@@ -238,7 +238,7 @@ export const content = {
           downloads: "10,000+",
           description:
             "AI-powered email writing assistant that generates professional emails using GPT/Gemini and supports 7 languages.",
-          playStore: "",
+          playStore: "https://play.google.com/store/apps/details?id=com.emailwriter&hl=en_IN",
           playStoreFallback: "https://play.google.com/store/search?q=QuickMail%20AI%20Email%20Writer&c=apps",
           appStore: "",
         },
